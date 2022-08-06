@@ -1,4 +1,11 @@
 import discord
-import os
-print("a vida é bela")
-print("\nnovo teste validação")
+
+class MyClient(discord.Client):
+    async def on_ready(self):
+        print('Logged on as {0}!'.format(self.user))
+
+    async def on_message(self, message):
+        print('Message from {0.author}: {0.content}'.format(message))
+
+client = MyClient()
+client.run('MTAwNTYxMjE4NDkyOTMyMDk5MA.GnsxQC.G8JClQT6stCLdqmalVVBkKnqT3gu-5zZDXbWuQ')
