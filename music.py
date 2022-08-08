@@ -13,7 +13,7 @@ class music_cog(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
     
-    @commands.command()
+    @commands.command(aliases = ['j'], help = "Comando pro Vagnao conectar.")
     async def join(self, ctx):
         if ctx.author.voice is None:
             await ctx.send("Entra num canal ae chupinga")
@@ -23,11 +23,11 @@ class music_cog(commands.Cog):
         else:
             await ctx.voice_client.move_to(vchannel)
     
-    @commands.command()
+    @commands.command(aliases = ['d', 'leave'], help = "Comando pro Vagnao desconectar.")
     async def disconnect(self, ctx):
         await ctx.voice_client.disconnect()
 
-    @commands.command()
+    @commands.command(aliases = ['p'], help = "Comando pro Vagnao tocar seu som!")
     async def play(self, ctx, url):
         ctx.voice_client.stop()
         FFMPEG_OPTIONS = {'before_options': '-reconnect 1 -reconnect_streamed 1 -reconnect_delay_max 5', 'options': '-vn'}
