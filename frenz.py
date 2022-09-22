@@ -19,3 +19,7 @@ class frenz_cog(commands.Cog):
     @commands.command(help="Comando para a mais troll do mundo")
     async def thati(self, ctx):
         await ctx.send("Vc procura pela Thatiana A TROLL?")
+    
+    @commands.command(help="comando teste pro habila")
+    async def habila(self, ctx):
+        await ctx.send("Teste pro meu mano Habila")
