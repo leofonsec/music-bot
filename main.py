@@ -13,4 +13,4 @@ bot = commands.Bot(command_prefix='.')
 bot.add_cog(frenz_cog(bot))
 bot.add_cog(music_cog(bot))
 
-bot.run('MTAwNTYxMjE4NDkyOTMyMDk5MA.GzIJK3.y9ZewjyeyS2l6Rlvne4UhwKBacYsmUfW8U9efg')
+bot.run('TOKEN')
